@@ -55,7 +55,12 @@ removeMovie = function (index) {
         {
           this.state.movies.map(function(movie){
             return(
-              <TouchableOpacity key={movie.id}>
+              <TouchableOpacity
+                key={movie.id}
+                onLongPress={ () => {
+                  this.removeMovie(movie.id)
+                }}  
+              >
                 <MovieCard
                   poster={movie.poster}
                   title={movie.title}
