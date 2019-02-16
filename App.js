@@ -24,7 +24,6 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   main: {
-    
     display: 'flex',
     flexDirection: 'column',
     backgroundColor: '#56a1c9',
