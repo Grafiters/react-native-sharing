@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, StatusBar } from 'react-native';
+import MovieCard from './components/MovieCard';
 
 export default class App extends React.Component {
   render() {
@@ -19,16 +20,7 @@ export default class App extends React.Component {
   }
 }
 
-class MovieCard extends React.Component{
-  render (){
-    return (
-      <View>
-        <Text>{ this.props.title }</Text>
-        <Text>{ this.props.origin }</Text>
-      </View>
-    );
-  }
-}
+
 
 const styles = StyleSheet.create({
   main: {
