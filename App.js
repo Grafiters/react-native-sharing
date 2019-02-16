@@ -5,14 +5,33 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+        <Text>FBI OPEN UP</Text>
+        <MovieCard
+          title="pemgetahuan"
+          origin="USA"
+        />
+        <MovieCard 
+          title="Simba"
+          origin="order"
+        />
+      </View>
+    );
+  }
+}
+
+class MovieCard extends React.Component{
+  render (){
+    return (
+      <View>
+        <Text>{ this.props.title }</Text>
+        <Text>{ this.props.origin }</Text>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  main: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
