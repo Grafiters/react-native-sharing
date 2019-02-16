@@ -7,7 +7,7 @@ export default class MovieCard extends React.Component{
           <View style = {styles.cardContainer}>
                <Image 
                     style = {styles.cardImage}
-                    source={{ uri: 'https://image.tmdb.org/t/p/w300/72Xk4cjiKy74AINaJ6T0HhRulLz.jpg'}}
+                    source={{ uri: this.props.poster }}
                />
                <View style={styles.cardTextContainer}>
                    <Text style = {styles.cardText}>{ this.props.title }</Text>
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
           height: 130,
           marginVertical: 24,
           backgroundColor: '#7cd3ff',
-          padding: 0,
+          padding: 8,
           
      },
      cardImage: {
@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
           paddingLeft: 8
      },
      cardText: {
-          color:'#fff'
+          color:'#fff',
+          
      }
 });
