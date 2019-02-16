@@ -1,10 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, StatusBar } from 'react-native';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.main}>
         <Text>FBI OPEN UP</Text>
         <MovieCard
           title="pemgetahuan"
@@ -32,9 +32,12 @@ class MovieCard extends React.Component{
 
 const styles = StyleSheet.create({
   main: {
+    
+    display: 'flex',
+    flexDirection: 'column',
+    backgroundColor: '#56a1c9',
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: StatusBar.currentHeight,
+    color: '#fff'
   },
 });
