@@ -44,8 +44,11 @@ state = {
   ]
 }
 
-removeMovie = function (index) {
-  this.state.movies.splice(index, 1)
+removeMovie = (id) => {
+  const movies = this.state.movies.filter(item => item.id !== id)
+  this.setState({
+    movies: movies
+  })
 }
 
   render() {
@@ -53,13 +56,11 @@ removeMovie = function (index) {
       <ScrollView>
       <View style={styles.main}>
         {
-          this.state.movies.map(function(movie){
+          this.state.movies.map( (movie)=> {
             return(
               <TouchableOpacity
                 key={movie.id}
-                onLongPress={ () => {
-                  this.removeMovie(movie.id)
-                }}  
+                onLongPress={ () => { this.removeMovie(movie.id) }}  
               >
                 <MovieCard
                   poster={movie.poster}
